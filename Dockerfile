@@ -6,6 +6,3 @@ COPY . /src/app/functions
 EXPOSE 3000
 CMD ["./node_modules/.bin/firebase","serve"]
 
-# RUN ls
-# COPY ./functions/ .
-# RUN ls
