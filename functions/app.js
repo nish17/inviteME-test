@@ -29,7 +29,7 @@ function authorize(credentials, callback) {
     client_secret,
     redirect_uris[0]
   );
-
+  console.log("hello");
   // Check if we have previously stored a token.
   fs.readFile(TOKEN_PATH, (err, token) => {
     if (err) return getAccessToken(oAuth2Client, callback);
