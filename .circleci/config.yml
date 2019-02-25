@@ -29,8 +29,7 @@ jobs:
       #     mv /tmp/docker/* /usr/bin
       - run:
         name: Docker Build
-        command: |
-          TAG=0.1.$CIRCLE_BUILD_NUM
+        command: TAG=0.1.$CIRCLE_BUILD_NUM
           docker build -t nish17/new_application:$TAG .
           docker login -u $DOCKER_USER -p $DOCKER_PASS
           docker push nish17/new_application:$TAG
